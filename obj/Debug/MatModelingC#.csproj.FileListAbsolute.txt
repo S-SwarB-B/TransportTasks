@@ -1,0 +1,7 @@
+D:\Programming\C#\MatModelingC#\bin\Debug\MatModelingC#.exe.config
+D:\Programming\C#\MatModelingC#\bin\Debug\MatModelingC#.exe
+D:\Programming\C#\MatModelingC#\bin\Debug\MatModelingC#.pdb
+D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.csproj.AssemblyReference.cache
+D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.csproj.CoreCompileInputs.cache
+D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.exe
+D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.pdb
