@@ -5,3 +5,10 @@ D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.csproj.AssemblyReference
 D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.csproj.CoreCompileInputs.cache
 D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.exe
 D:\Programming\C#\MatModelingC#\obj\Debug\MatModelingC#.pdb
+D:\Programming\C#\DlaTestirovania\TransportTasks\bin\Debug\MatModelingC#.exe.config
+D:\Programming\C#\DlaTestirovania\TransportTasks\bin\Debug\MatModelingC#.exe
+D:\Programming\C#\DlaTestirovania\TransportTasks\bin\Debug\MatModelingC#.pdb
+D:\Programming\C#\DlaTestirovania\TransportTasks\obj\Debug\MatModelingC#.csproj.AssemblyReference.cache
+D:\Programming\C#\DlaTestirovania\TransportTasks\obj\Debug\MatModelingC#.csproj.CoreCompileInputs.cache
+D:\Programming\C#\DlaTestirovania\TransportTasks\obj\Debug\MatModelingC#.exe
+D:\Programming\C#\DlaTestirovania\TransportTasks\obj\Debug\MatModelingC#.pdb

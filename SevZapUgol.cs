@@ -4,86 +4,120 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MetodiTransponirovaniaSevZap
+namespace TransportTasks
 {
-    internal class SevZapUgol
+    internal class NorthWest
     {
-        public int[] MassPostavsh(int n)
+        private int[] Supplier(int countSupplier)
         {
-            int[] Postavshiki = new int[n];
-            int a;
+            int[] supplierArr = new int[countSupplier];
+            int supplierUnit;
             Console.WriteLine("Поставщики");
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < countSupplier; i++)
             {
-                a = Convert.ToInt32(Console.ReadLine());
-                Postavshiki[i] = a;
+                supplierUnit = Convert.ToInt32(Console.ReadLine());
+                supplierArr[i] = supplierUnit;
             }
-            return Postavshiki;
+            return supplierArr;
         }
-        public int[] MassPokupat(int m)
+        private int[] Buyer(int countBuyer)
         {
-            int[] Pokupateli = new int[m];
-            int a;
+            int[] buyerMass = new int[countBuyer];
+            int buyerUnit;
             Console.WriteLine("Покупатели");
-            for (int i = 0; i < m; i++)
+            for (int i = 0; i < countBuyer; i++)
             {
-                a = Convert.ToInt32(Console.ReadLine());
-                Pokupateli[i] = a;
+                buyerUnit = Convert.ToInt32(Console.ReadLine());
+                buyerMass[i] = buyerUnit;
             }
-            return Pokupateli;
+            return buyerMass;
         }
-        public int[,] MassCost(int n, int m)
+        private int[,] Cost(int countSupplier, int countBuyer)
         {
-            int[,] Cost = new int[n, m];
-            int a;
+            int[,] costArr = new int[countSupplier, countBuyer];
+            int costUnit;
+
             Console.WriteLine("Стоимость");
-            for (int i = 0; i < n; i++)
+
+            for (int i = 0; i < countSupplier; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < countBuyer; j++)
                 {
-                    a = Convert.ToInt32(Console.ReadLine());
-                    Cost[i, j] = a;
+                    costUnit = Convert.ToInt32(Console.ReadLine());
+                    costArr[i, j] = costUnit;
                 }
                 Console.Write("\n");
             }
-            return Cost;
+            return costArr;
         }
-        public void SevZap(int n, int m)
+
+        private int CheckData(ref int[] supplierArr, ref int[] buyersArr, ref int[,] costArr, int countSupplier, int countBuyer)
         {
-            int[] Postavshiki = MassPostavsh(n);
-            int[] Pokupateli = MassPokupat(m);
-            int[,] Cost = MassCost(n, m);
-            int[,] GlavMass = new int[n, m];
-            int LX = 0;
-            for (int i = 0; i < n; i++)
+            try
             {
-                for (int j = 0; j < m; j++)
+                supplierArr = Supplier(countSupplier);
+                buyersArr = Buyer(countBuyer);
+                costArr = Cost(countSupplier, countBuyer);
+                return 0;
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+        public void Solve(int countSupplier, int countBuyer)
+        {
+            int[] supplierArr = null;
+            int[] buyerArr = null;
+            int[,] costArr = null;
+
+            int check = CheckData(ref supplierArr, ref buyerArr, ref costArr, countSupplier, countBuyer);
+
+            if (check == 0)
+            {
+                int[,] mainArr = new int[countSupplier, countBuyer];
+                int fullCost = 0;
+
+                CalculatingData(supplierArr, buyerArr, costArr, ref mainArr, ref fullCost, countSupplier, countBuyer);
+
+                for (int i = 0; i < countSupplier; i++)
                 {
-                    if (Postavshiki[i] >= Pokupateli[j])
+                    for (int j = 0; j < countBuyer; j++)
                     {
-                        GlavMass[i, j] = Pokupateli[j];
-                        Postavshiki[i] = Postavshiki[i] - Pokupateli[j];
-                        Pokupateli[j] = 0;
-                        LX = LX + GlavMass[i, j] * Cost[i, j];
+                        Console.Write(mainArr[i, j] + " ");
+                    }
+                    Console.WriteLine("\n");
+                }
+                Console.WriteLine(fullCost);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка при получении данных");
+            }
+        }
+
+        private void CalculatingData(int[] supplierArr, int[] buyerArr, int[,] costArr, ref int[,] mainArr, ref int fullCost, int countSupplier, int countBuyer)
+        {  
+            for (int i = 0; i < countSupplier; i++)
+            {
+                for (int j = 0; j < countBuyer; j++)
+                {
+                    if (supplierArr[i] >= buyerArr[j])
+                    {
+                        mainArr[i, j] = buyerArr[j];
+                        supplierArr[i] = supplierArr[i] - buyerArr[j];
+                        buyerArr[j] = 0;
+                        fullCost = fullCost + mainArr[i, j] * costArr[i, j];
                     }
                     else
                     {
-                        GlavMass[i, j] = Postavshiki[i];
-                        Pokupateli[j] = Pokupateli[j] - Postavshiki[i];
-                        Postavshiki[i] = 0;
-                        LX = LX + GlavMass[i, j] * Cost[i, j];
+                        mainArr[i, j] = supplierArr[i];
+                        buyerArr[j] = buyerArr[j] - supplierArr[i];
+                        supplierArr[i] = 0;
+                        fullCost = fullCost + mainArr[i, j] * costArr[i, j];
                     }
                 }
             }
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < m; j++)
-                {
-                    Console.Write(GlavMass[i, j] + " ");
-                }
-                Console.WriteLine("\n");
-            }
-            Console.WriteLine(LX);
         }
     }
 }

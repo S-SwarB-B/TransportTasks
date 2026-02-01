@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programming\\C#\\DlaTestirovania\\TransportTasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF1E26D-5847-41F8-B137-C28C99D5CF1B}|MatModelingC#.csproj|d:\\programming\\c#\\dlatestirovania\\transporttasks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF1E26D-5847-41F8-B137-C28C99D5CF1B}|MatModelingC#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDF1E26D-5847-41F8-B137-C28C99D5CF1B}|MatModelingC#.csproj|d:\\programming\\c#\\dlatestirovania\\transporttasks\\minel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDF1E26D-5847-41F8-B137-C28C99D5CF1B}|MatModelingC#.csproj|solutionrelative:minel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\C#\\DlaTestirovania\\TransportTasks\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Programming\\C#\\DlaTestirovania\\TransportTasks\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T12:25:50.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MinEl.cs",
+              "DocumentMoniker": "D:\\Programming\\C#\\DlaTestirovania\\TransportTasks\\MinEl.cs",
+              "RelativeDocumentMoniker": "MinEl.cs",
+              "ToolTip": "D:\\Programming\\C#\\DlaTestirovania\\TransportTasks\\MinEl.cs",
+              "RelativeToolTip": "MinEl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T12:22:19.78Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
